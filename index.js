@@ -6,7 +6,7 @@ const users = [];
 const server = http.createServer((request, response) => {  
   if(request.url === "/users") {
     if(request.method === "GET") {
-      return response.end("App is on!")
+      return response.end(JSON.stringify(users));
     }
     if(request.method === "POST") {
       request.on("data", (data) => {
@@ -20,9 +20,10 @@ const server = http.createServer((request, response) => {
 
         users.push(user);
 
+      }).on("end", () => {
+        return response.end(JSON.stringify(users));
       });
 
-      return response.end("POST method working!");
     }
   }
 });
