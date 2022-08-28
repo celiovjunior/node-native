@@ -21,4 +21,4 @@ npm install
 npm run dev
 ~~~
 
-* Ser aparecer uma mensagem dizendo `Server is running`, significa que o servidor está rodando com sucesso 😎
+* Se aparecer uma mensagem dizendo `Server is running`, significa que o servidor está rodando com sucesso 😎
